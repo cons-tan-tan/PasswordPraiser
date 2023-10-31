@@ -1,0 +1,14 @@
+{
+  "manifest_version": 3,
+  "name": "Password Praiser",
+  "version": "1.0",
+  "description": "堅牢なパスワードを褒めてくれます。",
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": [
+        "js/show-message.js"
+      ]
+    }
+  ]
+}
