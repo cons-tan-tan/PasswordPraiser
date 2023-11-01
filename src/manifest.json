@@ -7,7 +7,7 @@
     {
       "matches": ["<all_urls>"],
       "js": [
-        "js/show-message.js"
+        "js/browserified/show-message.js"
       ]
     }
   ]
