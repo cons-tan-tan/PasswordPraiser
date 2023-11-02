@@ -2,13 +2,13 @@
   "manifest_version": 3,
   "name": "Password Praiser",
   "version": "1.0",
+  "action": {},
+  "permissions": [
+    "activeTab",
+    "scripting"
+  ],
   "description": "堅牢なパスワードを褒めてくれます。",
-  "content_scripts": [
-    {
-      "matches": ["<all_urls>"],
-      "js": [
-        "js/browserified/show-message.js"
-      ]
-    }
-  ]
+  "background": {
+    "service_worker": "js/background.js"
+  }
 }
