@@ -1665,11 +1665,7 @@ const amount = passwordElements.length
 if (amount > 0) {
     pass = prompt("ユーザー名を入力してください", "")
     const result = checkPassword(pass)
-    alert(result.score)
-
-    // passwordElements.forEach((value, key, parent) => {
-    //
-    // });
+    alert(result.guesses + "\n" + result.feedback.warning + "\n" + result.feedback.suggestions)
 
 }
 
