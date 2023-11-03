@@ -8,7 +8,12 @@
     "scripting"
   ],
   "description": "堅牢なパスワードを褒めてくれます。",
-  "background": {
-    "service_worker": "js/background.js"
-  }
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": [
+        "js/browserified/show-message.js"
+      ]
+    }
+  ]
 }
