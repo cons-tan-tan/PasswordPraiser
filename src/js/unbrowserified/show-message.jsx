@@ -1,8 +1,10 @@
 const checkPassword = require("zxcvbn");
+const React = require("react");
+const ReactDOM = require("react-dom/client")
+const Button = require("@mui/material/Button")
 
 
 const passwordElements = document.querySelectorAll("input[type=password]");
-
 const amount = passwordElements.length;
 if (amount > 0) {
     // pass = prompt("ユーザー名を入力してください", "")
@@ -18,3 +20,20 @@ if (amount > 0) {
         });
     });
 }
+
+const App = () => {
+    return <div>
+        Hello
+    </div>
+}
+
+
+let praiser = document.createElement("div");
+praiser.id = "password-praiser";
+document.body.appendChild(praiser);
+const root = ReactDOM.createRoot(praiser);
+root.render(
+    <React.StrictMode>
+        <App />
+    </React.StrictMode>
+);

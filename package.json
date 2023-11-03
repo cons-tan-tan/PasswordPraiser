@@ -1,12 +1,18 @@
 {
   "dependencies": {
+    "@emotion/react": "^11.11.1",
+    "@emotion/styled": "^11.11.0",
+    "@mui/material": "^5.14.16",
     "@types/chrome": "^0.0.248",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "reactify": "^1.1.1",
     "zxcvbn": "^4.4.2"
   },
   "scripts": {
-    "build": "npm run build:show-message",
-    "build:show-message": "browserify src/js/unbrowserified/show-message.js -o src/js/browserified/show-message.js",
+    "dev": "npm run dev:show-message",
+    "dev:show-message": "browserify -t reactify src/js/unbrowserified/show-message.jsx -o src/js/browserified/show-message.js",
     "watch": "npm run watch:show-message",
-    "watch:show-message": "watchify src/js/unbrowserified/show-message.js -o src/js/browserified/show-message.js"
+    "watch:show-message": "watchify -t reactify src/js/unbrowserified/show-message.jsx -o src/js/browserified/show-message.js"
   }
 }
