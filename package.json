@@ -2,5 +2,11 @@
   "dependencies": {
     "@types/chrome": "^0.0.248",
     "zxcvbn": "^4.4.2"
+  },
+  "scripts": {
+    "build": "npm run build:show-message",
+    "build:show-message": "browserify src/js/unbrowserified/show-message.js -o src/js/browserified/show-message.js",
+    "watch": "npm run watch:show-message",
+    "watch:show-message": "watchify src/js/unbrowserified/show-message.js -o src/js/browserified/show-message.js"
   }
 }
