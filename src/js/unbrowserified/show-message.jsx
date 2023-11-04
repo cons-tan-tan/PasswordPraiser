@@ -7,10 +7,11 @@ const Button= require("@mui/material").Button;
 const App = () => {
     return <div id="password-praiser-ui"
         style={{
-            position: 'absolute',
+            all: 'initial',
+            position: 'fixed',
             width: '0%',
-            left: '0px',
-            top: '0px',
+            left: "10px",
+            top: "10px",
             zIndex: 2147483550,
         }}>
         <Button variant="contained" color="primary" onClick={() => {
@@ -24,10 +25,10 @@ const passwordElements = document.querySelectorAll("input[type=password]");
 const amount = passwordElements.length;
 if (amount > 0) {
 
-    let praiser = document.createElement("div");
-    praiser.id = "password-praiser";
-    document.body.appendChild(praiser);
-    const root = ReactDOM.createRoot(praiser);
+    let praiser_base = document.createElement("div");
+    praiser_base.id = "password-praiser-base";
+    document.body.append(praiser_base);
+    const root = ReactDOM.createRoot(praiser_base);
     root.render(
         <React.StrictMode>
             <App />

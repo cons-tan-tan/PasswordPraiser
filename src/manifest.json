@@ -4,8 +4,7 @@
   "version": "1.0",
   "action": {},
   "permissions": [
-    "activeTab",
-    "scripting"
+    "input"
   ],
   "description": "堅牢なパスワードを褒めてくれます。",
   "content_scripts": [
